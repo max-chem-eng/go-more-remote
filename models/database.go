@@ -35,7 +35,7 @@ func CloseConnection() {
 }
 
 func CreateTables() {
-	Db.AutoMigrate(&Job{}, &JobRun{})
+	Db.AutoMigrate(&Job{}, &JobRun{}, &Attachment{})
 	// migrator := Db.Migrator()
 	// if !migrator.HasTable(&Job{}) {
 	// 	if err != nil {
