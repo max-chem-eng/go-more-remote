@@ -116,6 +116,7 @@ func (jc *JobsController) ExecuteJob(c *gin.Context) {
 		logs, stats, err := jobengine.ExecuteJob(jobengine.JobConfig{
 			Language:      j.Language,
 			ScriptContent: job.ScriptContent,
+			Image:         job.Image,
 		})
 
 		now = time.Now()
